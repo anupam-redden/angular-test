@@ -10,6 +10,7 @@ import { UserComponent } from './user.component';
 import { UserDetailComponent } from './user-detail.component';
 import { PhotoComponent } from './photo.component';
 
+import { Location, LocationStrategy, PathLocationStrategy} from '@angular/common';
 import { AppRoutingModule }     from './app-routing.module';
 
 
@@ -29,7 +30,7 @@ import { AppRoutingModule }     from './app-routing.module';
     
 
   ],
-  providers: [UserService],
+  providers: [UserService,{provide: LocationStrategy, useClass: PathLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
