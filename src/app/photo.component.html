@@ -1,0 +1,20 @@
+<div class="col-md-12 col-sm-12 col-xs-12 no-padding">&nbsp;</div>
+<div class="container" style="width: 700px;">
+  <div [hidden]="!hideBigdiv">
+    
+    <ul class="list_view32">
+  <li *ngFor="let photo of photos" >
+    <span (click)="showBigImahe(photo)" style="cursor: pointer; width: 150px; margin: 0 20px 0 0;"><img src="{{photo.thumbnailUrl}}"/></span>
+    <span>{{photo.title}}</span>
+    <span><span class="btn btn-primary" (click)="showBigImahe(photo)" style="cursor: pointer;" style="margin: 20px 0  0 0;">Show Full Image</span></span>
+  </li>
+</ul>
+     <br><input type="button" class="btn btn-primary" name="" (click)="backPrev()" value="Back">
+  </div>
+  <div [hidden]="hideBigdiv"><img src="{{big_image}}"/>
+      <div class="col-md-12 col-sm-12 col-xs-12 no-padding">&nbsp;</div>
+      <div class="col-md-12 col-sm-12 col-xs-12 no-padding">
+      <input class="btn btn-primary" type="button" name="" (click)="backToMain()" value="Back"></div>
+    </div>
+</div>  
+<div class="col-md-12 col-sm-12 col-xs-12 no-padding">&nbsp;</div>

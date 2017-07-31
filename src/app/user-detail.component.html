@@ -1,0 +1,83 @@
+<div class="container">
+<div style="text-align: center;">
+   <div class="col-md-12 col-sm-12 col-xs-12 no-padding">&nbsp;</div>
+   <div *ngIf="user" style="border: 1px solid #ddd; text-align: left; float:left; width: 100%;">
+    <div class="col-md-6 col-sm-6 col-xs-12 no-padding">
+    <h4 class="t-c">User Details</h4>
+   	 <table class="table table-striped">
+   	 	<tr>
+   	 		<td><b>ID</b></td>
+   	 		<td>{{user.id}}</td>
+   	 	</tr>
+   	 	<tr>
+   	 		<td><b>Name</b></td>
+   	 		<td>{{user.name}}</td>
+   	 	</tr>
+			<tr>
+   	 		<td><b>User Name</b></td>
+   	 		<td>{{user.username}}</td>
+   	 	</tr>
+			<tr>
+   	 		<td><b>Email</b></td>
+   	 		<td>{{user.email}}</td>
+   	 	</tr>
+			<tr>
+   	 		<td><b>Address</b></td>
+   	 		<td>
+					{{user.address.street}},
+          {{user.address.suite}},
+					{{user.address.city}}<br>
+					Zip:{{user.address.zipcode}}<br>
+					Lat:{{user.address.geo.lat}}<br>
+          Long:{{user.address.geo.lng}}
+				</td>
+   	 	</tr>
+
+			<tr>
+   	 		<td><b>Phone</b></td>
+   	 		<td>
+
+          {{user.phone}}
+
+				</td>
+   	 	</tr>
+			<tr>
+   	 		<td><b>Website</b></td>
+   	 		<td>
+
+          {{user.website}}
+
+				</td>
+   	 	</tr>
+			<tr>
+   	 		<td><b>Company</b></td>
+   	 		<td>
+
+          {{user.company.name}}<br>
+					{{user.company.catchPhrase}}<br>
+					{{user.company.bs}}
+
+				</td>
+   	 	</tr>
+   	 </table>
+    </div>
+       <div class="col-md-6 col-sm-6 col-xs-12 no-padding" style="background: #F9F9F9; height:500px; border-left: 1px solid #ddd;">
+   	 <div><h4 class="t-c">Albums</h4></div>
+    <table class="table table-striped">
+   	 	<tr>
+   	 		<td>
+                <ul>
+   	 <li *ngFor="let albm of albums">
+   	 	<div style="cursor: pointer; color: #286090; text-transform: Capitalize; padding: 1% 0;" (click)="showImages(albm.id)">{{albm.title}}</div>
+         <div style="clear: both;"></div></li>
+          </ul>
+         </td>
+         </tr>
+        </table>
+       </div>
+   </div>
+    <div class="col-md-12 col-sm-12 col-xs-12 no-padding">&nbsp;</div>
+   <br><input type="button" class="btn btn-primary" name="" (click)="backPrev()" value="Back">
+
+</div>
+</div>

@@ -1,18 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import {User} from './user';
 import {UserService} from './user.service';
+import { Router }            from '@angular/router';
 
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './user.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent  implements OnInit {
+export class UserComponent  implements OnInit {
   title = 'app';
   users:User[];
 
-   constructor( private userService: UserService){
+   constructor( private userService: UserService,private router: Router){
              
 
    }
@@ -32,5 +33,10 @@ export class AppComponent  implements OnInit {
     ngOnInit(): void {
 	    this.getUsers();
 
+	}
+
+	getdetail(user:User):void{
+	    var id=user.id;
+	    this.router.navigate(['/detail', user.id]);
 	}
 }

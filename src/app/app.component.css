@@ -1,0 +1,46 @@
+.list_view32 {
+    border: 1px solid #f1f1f1;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+}
+.list_view32 li {
+    border-bottom: 1px solid #f1f1f1;
+    list-style: none;
+    padding: 6px 10px;
+    overflow: hidden;
+    background: #F9F9F9;
+    text-align: left;
+}
+.list_view32 li:nth-child(even) {
+    background: #fff;
+}
+.list_view32 li {
+    border-bottom: 1px solid #f1f1f1;
+}
+.list_view32 li span {
+    float: left;
+    /*width:5%;*/    
+    /*text-align: center;*/
+}
+.list_view32 li span:nth-child(2) {
+    float: left;
+    width: 35%;
+    /*text-align: center;*/
+}
+.list_view32 li span:nth-child(3) {
+    float: left;
+    width: 50%;
+    /*text-align: center;*/
+}
+.list_view32 li span:nth-child(4) {
+    float: left;
+    width: 10%;
+    /*text-align: center;*/
+}
+.no-padding {
+    padding: 0px !important;
+}
+.t-c {
+    text-align: center;
+}

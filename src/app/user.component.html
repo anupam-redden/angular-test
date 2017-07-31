@@ -1,0 +1,11 @@
+<div class="col-md-12 col-sm-12 col-xs-12 no-padding">&nbsp;</div>
+<div class="container">
+<ul class="list_view32">
+  <li *ngFor="let user of users" >
+    <span class="badge" style="margin:0 20px 0 0; width:30px;">{{user.id}}</span>
+    <span>{{user.name}}</span>
+    <span>{{user.email}}</span>
+    <span><span style="cursor: pointer;" class="btn btn-info" (click)="getdetail(user)">Details</span></span>
+  </li>
+</ul>
+</div>
