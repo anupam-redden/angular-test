@@ -10,7 +10,7 @@ import { UserComponent } from './user.component';
 import { UserDetailComponent } from './user-detail.component';
 import { PhotoComponent } from './photo.component';
 
-import { Location, LocationStrategy, PathLocationStrategy} from '@angular/common';
+import { Location, LocationStrategy, HashLocationStrategy} from '@angular/common';
 import { AppRoutingModule }     from './app-routing.module';
 
 
@@ -30,7 +30,7 @@ import { AppRoutingModule }     from './app-routing.module';
     
 
   ],
-  providers: [UserService,{provide: LocationStrategy, useClass: PathLocationStrategy}],
+  providers: [UserService,{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
